@@ -181,6 +181,8 @@ require('lazy').setup({
       -- open file_browser with the path of the current buffer
       vim.keymap.set('n', '<space>fb', ':Telescope file_browser path=%:p:h select_buffer=true<CR>', { desc = '[F]ile current [B]uffer' })
       vim.keymap.set('n', '<space>fsi', ':Telescope file_browser path=~/Code/swish/infra<CR>', { desc = '[F]ile [S]wish [I]nfra' })
+      vim.keymap.set('n', '<space>fcd', ':Telescope file_browser path=~/Code<CR>', { desc = '[F]ile [C]ode [D]irectory' })
+      vim.keymap.set('n', '<space>fca', ':Telescope file_browser path=~/Code/apps<CR>', { desc = '[F]ile [C]ode [A]pps' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
@@ -610,6 +612,9 @@ require('lazy').setup({
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
       require('mini.surround').setup()
+
+      -- mini.pairs
+      require('mini.pairs').setup()
 
       -- Simple and easy statusline.
       --  You could remove this setup call if you don't like it,
